@@ -268,6 +268,100 @@ cd <folder>
 - ✅ **Tương thích** - Hoạt động với Nautilus 3.0 và 4.0
 - ✅ **Nhẹ** - Không ảnh hưởng hiệu năng
 
+## 🆚 So sánh với Templates truyền thống
+
+### Cách truyền thống (~/Templates)
+
+Nautilus/Files hỗ trợ templates bằng cách đặt file mẫu trong `~/Templates`:
+
+```bash
+# Tạo templates
+mkdir -p ~/Templates
+touch ~/Templates/Empty\ File.txt
+echo "#!/bin/bash" > ~/Templates/Shell\ Script.sh
+```
+
+**Nhược điểm:**
+- ❌ Phải tạo và quản lý file template thủ công
+- ❌ Tên file cố định, không linh hoạt
+- ❌ Không có UI để nhập tên file
+- ❌ Phải rename file sau khi tạo
+- ❌ Không tự động mở file
+- ❌ Khó thêm/sửa templates
+- ❌ Không có dropdown chọn extension
+- ❌ Chiếm dung lượng với nhiều template files
+
+### Extension này
+
+**Ưu điểm:**
+- ✅ **UI dialog đẹp** - Nhập tên file trước khi tạo
+- ✅ **Tự động mở** - File được mở ngay bằng editor
+- ✅ **Không cần file template** - Templates được code sẵn
+- ✅ **Linh hoạt** - Chọn extension từ dropdown
+- ✅ **Custom extension** - Tự nhập extension bất kỳ
+- ✅ **Nhanh hơn** - Enter để tạo, không cần rename
+- ✅ **Dễ customize** - Sửa code Python thay vì quản lý files
+- ✅ **Nhiều templates** - 10+ loại file có sẵn
+- ✅ **Không chiếm dung lượng** - Không cần lưu template files
+
+### Bảng so sánh
+
+| Tính năng | Templates (~/.Templates) | Extension này |
+|-----------|-------------------------|---------------|
+| Nhập tên file trước | ❌ Không | ✅ Có UI dialog |
+| Tự động mở file | ❌ Không | ✅ Mở bằng gedit |
+| Chọn extension | ❌ Không | ✅ Dropdown |
+| Custom extension | ❌ Khó | ✅ Dễ dàng |
+| Thêm template mới | ❌ Tạo file mới | ✅ Sửa code |
+| Templates có sẵn | ❌ Phải tự tạo | ✅ 10+ templates |
+| Chiếm dung lượng | ❌ Có (mỗi template 1 file) | ✅ Không |
+| Tốc độ | ⚠️ Phải rename sau | ✅ Tạo xong luôn |
+| UI/UX | ⚠️ Menu đơn giản | ✅ Dialog đẹp |
+
+### Ví dụ workflow
+
+**Với Templates truyền thống:**
+1. Chuột phải → "New Document" → "Shell Script.sh"
+2. File `Shell Script.sh` được tạo
+3. Chuột phải file → Rename → Đổi tên thành `deploy.sh`
+4. Double-click để mở
+5. **Tổng: 5 bước**
+
+**Với Extension này:**
+1. Chuột phải → "📄 New File" → "⚙️ Shell Script"
+2. Nhập tên: `deploy` → Enter
+3. File `deploy.sh` được tạo và mở luôn
+4. **Tổng: 2 bước** ⚡
+
+### Khi nào dùng Templates truyền thống?
+
+Templates truyền thống vẫn hữu ích khi:
+- Bạn có template phức tạp (vd: project boilerplate với nhiều dòng)
+- Cần copy cả cấu trúc thư mục
+- Template thay đổi thường xuyên
+- Muốn share template giữa nhiều users
+
+### Khi nào dùng Extension này?
+
+Extension này tốt hơn khi:
+- ✅ Tạo file đơn giản hàng ngày
+- ✅ Cần nhập tên file trước
+- ✅ Muốn tự động mở file
+- ✅ Cần linh hoạt với extension
+- ✅ Không muốn quản lý template files
+
+### Có thể dùng cả 2!
+
+Extension này **không thay thế** mà **bổ sung** cho Templates:
+- Dùng Templates cho: Project boilerplates, complex templates
+- Dùng Extension cho: Quick file creation, daily tasks
+
+```bash
+# Vẫn có thể dùng cả 2
+~/Templates/           # Templates phức tạp
+Extension này          # Tạo file nhanh
+```
+
 ## 📝 Templates có sẵn
 
 | Extension | Template |
